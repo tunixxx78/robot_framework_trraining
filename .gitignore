@@ -5,3 +5,4 @@ report.html
 playwright-log.txt
 .log
 _pycache_/
+browser/

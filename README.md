@@ -10,4 +10,4 @@ For this repo you need a valid instalation of python and node.js.
 
 # running tests
 
-to make sure that your virtual environment is activated -> then run -> "robot -d logs tests/"
+to make sure that your virtual environment is activated -> then run -> "robot -d [target destination] [test/tests under run]"

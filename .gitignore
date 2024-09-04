@@ -1,8 +1,10 @@
 .venv/
+logs/*
 log.html
 output.xml
 report.html
 playwright-log.txt
 .log
-__pycache__/
+*/__pycache__/
 browser/
+.vscode/

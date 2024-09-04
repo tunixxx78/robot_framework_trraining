@@ -4,5 +4,5 @@ output.xml
 report.html
 playwright-log.txt
 .log
-_pycache_/
+__pycache__/
 browser/

@@ -1,22 +1,23 @@
 *** Settings ***
-Library    Browser
+Library           Browser
+Variables         ..${/}data${/}locators.py
+Variables         ..${/}data${/}common.py
+Resource          ..${/}resources${/}rentalstore.resource
+Suite Setup       Open Rentalstore
+Suite Teardown    Close Browser
 
-*** Variables ***
-${USERNAME}    timmy
-${PASSWORD}    timmy
-${RENTAL_URL}    https://rentalstore.azurewebsites.net/login
-${BROWSER}    chromium
 
 *** Test Cases ***
 Successful Login Test
-    New Context
-    New Browser    ${BROWSER}    headless=False
-    New Page    ${RENTAL_URL}
-    Type Text    //*[@id="id_username"]    ${USERNAME}
-    Type Secret    //*[@id="id_password"]    $PASSWORD
-    Click    //form/button[@type="submit"]
+    [Setup]    Go To    ${RENTALSTORE_URL}/login
+    Login To Rentalstore    ${USERNAME}    ${PASSWORD}
+    # Check that login was successful
+    ${logout_link}    Get Element    ${LOGOUT_LINK}
+    [Teardown]    Logout From Rentalstore
 
-    # check that login was successful
-    ${logout_link}    Get Element    //*[@id="logout"]
-    Click    ${logout_link}
+Failed Login Test
+    [Setup]    Go To    ${RENTALSTORE_URL}/login
+    Login To Rentalstore    ${USERNAME}    ${WRONGPASSWORD}
+    ${error_message}     Get Element    xpath=//div[@class="alert alert-danger" and @role="alert"]
+    Log    ${error_message}
     Close Browser

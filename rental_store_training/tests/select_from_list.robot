@@ -11,10 +11,6 @@ Suite Teardown    Close Browser
 Choose Right Object 
     [Setup]    Go To    ${RENTALSTORE_URL}/login
     Login To Rentalstore    ${USERNAME}    ${PASSWORD}
-    Sleep    2
     Click    //*[@id="add-equipment"]
-    Sleep    2
     Select Options By    //*[@id="id_category"]    label    Padel 
-    Sleep    2
     Take Screenshot    # ${..${/}results}/screenshot
-    Sleep    2

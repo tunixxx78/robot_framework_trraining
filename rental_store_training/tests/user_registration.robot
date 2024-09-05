@@ -17,5 +17,6 @@ Registration No username
 
 Registration With All Values
     [Setup]    Go To    ${RENTALSTORE_URL}
+    # ${user_name}    Create Random Username
         Open And Fill User Registration    ${FIRST_NAME}    ${LAST_NAME}    ${NEW_USERNAME}    ${NEW_EMAIL}     ${NEW_PASSWORD}
     Sleep    5

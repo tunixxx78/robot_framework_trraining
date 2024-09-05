@@ -13,4 +13,4 @@ Choose Right Object
     Login To Rentalstore    ${USERNAME}    ${PASSWORD}
     Click    ${EQUIPMENT_ADD_BUTTON}
     Select Options By    ${EQUIPMENT_TYPE_SELECTOR}    label    Padel 
-    Take Screenshot    filename=${CURDIR}${/}..${/}results${/}test.png 
+    Take Screenshot    filename=${CURDIR}${/}..${/}results${/}test{index}.png 

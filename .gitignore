@@ -8,3 +8,7 @@ playwright-log.txt
 */__pycache__/
 browser/
 .vscode/
+.png
+.jpg
+.jpeg
+

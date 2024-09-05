@@ -1,7 +1,7 @@
 *** Settings ***
 Library           Browser
-Library           ..${/}libs${/}user_info.py
 
+Variables           ..${/}libs${/}user_info.py
 Variables         ..${/}data${/}locators.py
 Variables         ..${/}data${/}common.py
 Resource          ..${/}resources${/}rentalstore.resource

@@ -1,5 +1,6 @@
 *** Settings ***
 Library           Browser
+Library           ..${/}libs${/}UsernameGenerator.py
 
 Variables           ..${/}libs${/}user_info.py
 Variables         ..${/}data${/}locators.py

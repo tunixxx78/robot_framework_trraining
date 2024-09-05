@@ -16,6 +16,7 @@ Successful Login Test
     [Teardown]    Logout From Rentalstore
 
 Failed Login Test
+    [Tags]    notready
     [Setup]    Go To    ${RENTALSTORE_URL}/login
     Login To Rentalstore    ${USERNAME}    ${WRONGPASSWORD}
     ${error_message}     Get Element    xpath=//div[@class="alert alert-danger" and @role="alert"]

@@ -11,6 +11,7 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 Fill Input Fields
-    FOR     ${i}     IN RANGE    0    3
+    ${count}    Get Length    ${PERSONS}
+    FOR     ${i}     IN RANGE    ${count}
         Open And Fill Form    ${PERSONS}[${i}][firstname]    ${PERSONS}[${i}][lastname]    ${PERSONS}[${i}][company]    ${PERSONS}[${i}][role]    ${PERSONS}[${i}][address]    ${PERSONS}[${i}][email]    ${PERSONS}[${i}][phone]
     END 

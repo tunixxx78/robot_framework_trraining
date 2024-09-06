@@ -11,5 +11,6 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 Fill Input Fields
-    Open And Fill Form    ${PERSON}[firstname]    ${PERSON}[lastname]    ${PERSON}[company]    ${PERSON}[role]
-    Sleep    5
+    FOR     ${i}     IN RANGE    0    3
+        Open And Fill Form    ${PERSONS}[${i}][firstname]    ${PERSONS}[${i}][lastname]    ${PERSONS}[${i}][company]    ${PERSONS}[${i}][role]    ${PERSONS}[${i}][address]    ${PERSONS}[${i}][email]    ${PERSONS}[${i}][phone]
+    END 

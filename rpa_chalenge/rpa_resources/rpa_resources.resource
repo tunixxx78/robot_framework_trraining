@@ -13,8 +13,13 @@ Open Rpa Site
 
 
 Open And Fill Form
-    [Arguments]    ${first_name}    ${last_name}    ${company}     ${role}
+    [Arguments]    ${first_name}    ${last_name}    ${company}     ${role}    ${address}    ${email}     ${phone}
     Type Text    ${FIRST_NAME_INPUTFIELD}    ${first_name}
     Type Text    ${LAST_NAME_INPUTFIELD}    ${last_name}
     Type Text    ${COMPANY_INPUTFIELD}    ${company}
     Type Text    ${ROLE_INPUTFIELD}    ${role}
+    Type Text    ${ADRESS_INPUTFIELD}    ${address}
+    Type Text    ${EMAIL_INPUTFIELD}    ${email}
+    Type Text    ${PHONE_INPUTFIELD}    ${phone}
+    Sleep    2
+    Click    ${SUBMIT_BUTTON}

@@ -13,5 +13,6 @@ Suite Teardown    Close Browser
 Fill Input Fields
     ${count}    Get Length    ${PERSONS}
     FOR     ${i}     IN RANGE    ${count}
-        Open And Fill Form    ${PERSONS}[${i}][firstname]    ${PERSONS}[${i}][lastname]    ${PERSONS}[${i}][company]    ${PERSONS}[${i}][role]    ${PERSONS}[${i}][address]    ${PERSONS}[${i}][email]    ${PERSONS}[${i}][phone]
+        Open And Fill Form    ${PERSONS}[${i}][firstname]    ${PERSONS}[${i}][lastname]    ${PERSONS}[${i}][company]    
+        ...    ${PERSONS}[${i}][role]    ${PERSONS}[${i}][address]    ${PERSONS}[${i}][email]    ${PERSONS}[${i}][phone]
     END 

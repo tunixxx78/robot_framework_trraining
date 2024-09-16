@@ -1,0 +1,13 @@
+EQUIPMENTPAGE = '//a[contains(text(), "Equipment")]'
+FIRST_EQUIPMENT_FROM_LIST = '//*[@id="equipment-table"]/table/tbody/tr[1]/td[1]/a'
+
+EQUIPMENT_NAME = '//html/body/div[2]/div/dl/dd[1]'
+EQUIPMENT_CATEGORY = '//html/body/div[2]/div/dl/dd[2]'
+EQUIPMENT_MANUFACTURER = '//html/body/div[2]/div/dl/dd[3]'
+EQUIPMENT_MODEL = '//html/body/div[2]/div/dl/dd[4]'
+EQUIPMENT_YEAR = '//html/body/div[2]/div/dl/dd[5]'
+EQUIPMENT_COLOR = '//html/body/div[2]/div/dl/dd[6]'
+EQUIPMENT_CONDITION = '//html/body/div[2]/div/dl/dd[7]'
+EQUIPMENT_SIZE = '//html/body/div[2]/div/dl/dd[8]'
+EQUIPMENT_SKILL_LEVEL = '//html/body/div[2]/div/dl/dd[9]'
+EQUIPMENT_DESCRIPTION = '//html/body/div[2]/div/dl/dd[10]'

@@ -1,9 +1,9 @@
 *** Settings ***
 Library    Browser
-Library    pandas_test.py
+Library    data_scraping.py
 
 
-Variables    pandas_test.py
+Variables    data_scraping.py
 
 *** Variables ***
 ${FILTER_INPUTFIELD}    //*[@id="id_name"]
@@ -21,8 +21,11 @@ Get Data And Save To Csv File
     FOR    ${i}    IN RANGE   0    3
         Type Text    ${FILTER_INPUTFIELD}    ${ADDED_EQUIPMENTS}[${i}]
             Click    ${FILTER_BUTTON}
-            Sleep    5
-            Get Data    ${i - 1}
+            Sleep    2
+            ${current_data}     Get Page Source
+            Sleep    2
+            ${return_value}     Get Data    ${current_data}
+            Log To Console    ${return_value}
     END
     
 

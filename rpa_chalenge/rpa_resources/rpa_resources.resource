@@ -6,6 +6,9 @@ Variables      ..${/}rpa_data/${/}rpa_common.py
 
 
 *** Keywords ***
+Fetch User rpa_data
+    Pass Execution    todo
+
 Open Rpa Site
     New Context
     New Browser    ${RPA_BROWSER}    headless=False
@@ -21,5 +24,5 @@ Open And Fill Form
     Type Text    ${ADRESS_INPUTFIELD}    ${address}
     Type Text    ${EMAIL_INPUTFIELD}    ${email}
     Type Text    ${PHONE_INPUTFIELD}    ${phone}
-    Sleep    2
+    Sleep    1
     Click    ${SUBMIT_BUTTON}

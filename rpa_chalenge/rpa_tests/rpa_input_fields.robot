@@ -11,7 +11,7 @@ Suite Teardown    Close Browser
 
 
 *** Test Cases ***
-Fill Input Fields
+Fill Input Fields From Hardcoded List
     
     ${count}    Get Length    ${PERSONS}
     FOR     ${i}     IN RANGE    ${count}
@@ -19,7 +19,7 @@ Fill Input Fields
         ...    ${PERSONS}[${i}][role]    ${PERSONS}[${i}][address]    ${PERSONS}[${i}][email]    ${PERSONS}[${i}][phone]
     END 
 
-Fetch And Fill Input Fields
+Fetch And Fill Input Fields From Excel File
     ${result_list}    User Data As List Of Dictionarys    ..${/}challenge.xlsx
     FOR    ${element}    IN    @{result_list}
         Open And Fill Form    ${element}[First Name]    ${element}[Last Name ]    ${element}[Company Name]    

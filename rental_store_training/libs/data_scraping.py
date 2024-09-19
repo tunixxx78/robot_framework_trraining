@@ -9,7 +9,7 @@ class data_scraping:
     @keyword
     def send_source(self, source):
         source =StringIO(source)
-        new_df = pd.read_html(source)
+        new_df = pd.read_html(source)[0]
         self.df = pd.concat([self.df, new_df])
 
     @keyword
